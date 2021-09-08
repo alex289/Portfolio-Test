@@ -1,0 +1,23 @@
+{
+  "name": "portfolio-test",
+  "version": "1.0.0",
+  "description": "test for my portfolio website",
+  "scripts": {
+    "test": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alex289/Portfolio-Test.git"
+  },
+  "keywords": [
+    "cypress",
+    "nodejs",
+    "test"
+  ],
+  "author": "Alex289",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Alex289/Portfolio-Test/issues"
+  },
+  "homepage": "https://github.com/Alex289/Portfolio-Test#readme"
+}
