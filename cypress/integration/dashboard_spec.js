@@ -17,7 +17,10 @@ describe('Dashboard page', () => {
     // Click twice to handle next-themes bug
     cy.get(`button[aria-label="Toggle Dark Mode"]`)
       .trigger('mouseover')
-      .click()
+      .click();
+
+    cy.get(`button[aria-label="Toggle Dark Mode"]`)
+      .trigger('mouseover')
       .click();
 
     cy.get('html.light').should('exist');
