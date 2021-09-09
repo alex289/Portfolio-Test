@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "test for my portfolio website",
   "scripts": {
-    "test": "cypress open"
+    "cypress:open": "node_modules/.bin/cypress open",
+    "cypress:run": "node_modules/.bin/cypress run",
+    "lint": "eslint cypress/**/*.js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +21,11 @@
   "bugs": {
     "url": "https://github.com/Alex289/Portfolio-Test/issues"
   },
-  "homepage": "https://github.com/Alex289/Portfolio-Test#readme"
+  "homepage": "https://github.com/Alex289/Portfolio-Test#readme",
+  "dependencies": {
+    "cypress": "^8.3.1",
+    "eslint": "^7.32.0",
+    "eslint-plugin-cypress": "^2.11.3",
+    "prettier": "^2.4.0"
+  }
 }

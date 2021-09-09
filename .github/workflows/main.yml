@@ -1,0 +1,17 @@
+name: End-to-end tests
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 1 * *'
+    
+jobs:
+  cypress-run:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        - run: yarn
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
