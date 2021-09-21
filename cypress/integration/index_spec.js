@@ -14,11 +14,21 @@ describe('Index page', () => {
   it('Dark/Light mode should work', () => {
     cy.get('html').then((item) => {
       if (item.hasClass('dark')) {
+        // Click twice to handle next-themes bug
+        cy.get(`button[aria-label="Toggle Dark Mode"]`)
+          .trigger('mouseover')
+          .click();
+
         cy.get(`button[aria-label="Toggle Dark Mode"]`)
           .trigger('mouseover')
           .click();
         cy.get('html.light').should('exist');
       } else if (item.hasClass('light')) {
+        // Click twice to handle next-themes bug
+        cy.get(`button[aria-label="Toggle Dark Mode"]`)
+          .trigger('mouseover')
+          .click();
+
         cy.get(`button[aria-label="Toggle Dark Mode"]`)
           .trigger('mouseover')
           .click();
