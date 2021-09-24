@@ -1,6 +1,6 @@
-describe('Index page', () => {
-  it('Should load page', () => {
-    cy.visit('/');
+describe('404 page', () => {
+  it('should load page', () => {
+    cy.visit('/404', { failOnStatusCode: false });
   });
 
   it('Should have a navbar', () => {
@@ -29,16 +29,19 @@ describe('Index page', () => {
     });
   });
 
-  it('Should have a profile image', () => {
-    cy.get(`img[alt="Profile picture"]`).should('be.visible');
+  it('Should have 404 title', () => {
+    cy.get('h1').contains('404');
   });
 
   it('Should switch language to de', () => {
     cy.get('option[selected]').contains('EN');
-    cy.get('h1').contains('Hey, I’m Alexander Konietzko');
 
     cy.get('select').select('DE');
 
-    cy.get('h1').contains('Hey, ich bin Alexander Konietzko');
+    cy.get(
+      'p[class="text-gray-500 dark:text-gray-400 text-sm mx-auto"]'
+    ).contains(
+      'Geschrieben mit Next.js und TailwindCss. Bereitgestellt auf Vercel.'
+    );
   });
 });

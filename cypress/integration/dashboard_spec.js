@@ -14,24 +14,16 @@ describe('Dashboard page', () => {
   it('Dark/Light mode should work', () => {
     cy.get('html').then((item) => {
       if (item.hasClass('dark')) {
-        // Click twice to handle next-themes bug
         cy.get(`button[aria-label="Toggle Dark Mode"]`)
           .trigger('mouseover')
           .click();
 
-        cy.get(`button[aria-label="Toggle Dark Mode"]`)
-          .trigger('mouseover')
-          .click();
         cy.get('html.light').should('exist');
       } else if (item.hasClass('light')) {
-        // Click twice to handle next-themes bug
         cy.get(`button[aria-label="Toggle Dark Mode"]`)
           .trigger('mouseover')
           .click();
 
-        cy.get(`button[aria-label="Toggle Dark Mode"]`)
-          .trigger('mouseover')
-          .click();
         cy.get('html.dark').should('exist');
       }
     });
@@ -39,5 +31,17 @@ describe('Dashboard page', () => {
 
   it('Should have data', () => {
     cy.contains('No data').should('not.exist');
+  });
+
+  it('Should switch language to de', () => {
+    cy.get('option[selected]').contains('EN');
+
+    cy.get('select').select('DE');
+
+    cy.get(
+      'p[class="text-gray-500 dark:text-gray-400 text-sm mx-auto"]'
+    ).contains(
+      'Geschrieben mit Next.js und TailwindCss. Bereitgestellt auf Vercel.'
+    );
   });
 });
