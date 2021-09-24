@@ -1,5 +1,4 @@
 {
   "baseUrl": "https://alexanderkonietzko.vercel.app",
-  "screenshotOnRunFailure": false,
-  "video": false
+  "videoUploadOnPasses": false
 }
