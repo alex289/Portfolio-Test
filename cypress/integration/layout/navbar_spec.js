@@ -1,14 +1,21 @@
-describe('404 page', () => {
-  it('should load page', () => {
-    cy.visit('/404', { failOnStatusCode: false });
+describe('Navbar component', () => {
+  it('Should load page', () => {
+    cy.visit('/');
   });
 
   it('Should have a navbar', () => {
     cy.get('nav');
   });
 
-  it('Should have a footer', () => {
-    cy.get('footer');
+  it('Should have working links', () => {
+    cy.get('nav').get('a').contains('About').click();
+    cy.get('h3').contains('About').should('be.visible');
+
+    cy.get('nav').get('a').contains('Home').click();
+    cy.get('h1').contains('Hey, I’m Alexander Konietzko').should('be.visible');
+
+    cy.get('nav').get('a').contains('Projects').click();
+    cy.get('h3').contains('Projects').should('be.visible');
   });
 
   it('Dark/Light mode should work', () => {
@@ -29,25 +36,12 @@ describe('404 page', () => {
     });
   });
 
-  it('Should have 404 title', () => {
-    cy.get('h1').contains('404');
-  });
-
   it('Should switch language to de', () => {
     cy.get('option[selected]').contains('EN');
+    cy.get('h1').contains('Hey, I’m Alexander Konietzko');
 
     cy.get('select').select('DE');
 
-    cy.get(
-      'p[class="text-gray-500 dark:text-gray-400 text-sm mx-auto"]'
-    ).contains(
-      'Geschrieben mit Next.js und TailwindCss. Bereitgestellt auf Vercel.'
-    );
-  });
-
-  it('Should get back', () => {
-    cy.get('a').contains('Zurück zur Startseite').click();
-
-    cy.url().should('eq', 'https://alexanderkonietzko.vercel.app/de');
+    cy.get('h1').contains('Hey, ich bin Alexander Konietzko');
   });
 });

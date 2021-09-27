@@ -4,7 +4,7 @@
   "description": "test for my portfolio website",
   "scripts": {
     "cypress:open": "node_modules/.bin/cypress open",
-    "cypress:run": "node_modules/.bin/cypress run",
+    "cypress:run": "node_modules/.bin/cypress run --config video=false",
     "lint": "eslint cypress/**/*.js"
   },
   "repository": {

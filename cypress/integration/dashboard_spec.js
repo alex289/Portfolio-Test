@@ -31,6 +31,8 @@ describe('Dashboard page', () => {
 
   it('Should have data', () => {
     cy.contains('No data').should('not.exist');
+
+    cy.get('div').contains('UP').should('exist');
   });
 
   it('Should switch language to de', () => {
