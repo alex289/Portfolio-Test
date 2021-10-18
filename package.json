@@ -5,6 +5,7 @@
   "scripts": {
     "cypress:open": "node_modules/.bin/cypress open",
     "cypress:run": "node_modules/.bin/cypress run --config video=false",
+    "cypress:run:record": "node_modules/.bin/cypress run",
     "lint": "eslint cypress/**/*.js"
   },
   "repository": {
@@ -23,8 +24,8 @@
   },
   "homepage": "https://github.com/Alex289/Portfolio-Test#readme",
   "dependencies": {
-    "cypress": "^8.4.1",
-    "eslint": "^7.32.0",
+    "cypress": "^8.6.0",
+    "eslint": "^8.0.1",
     "eslint-plugin-cypress": "^2.12.1",
     "prettier": "^2.4.1"
   }
