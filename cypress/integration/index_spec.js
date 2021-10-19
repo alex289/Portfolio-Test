@@ -12,9 +12,9 @@ describe('Index page', () => {
 
     cy.get('h2').should('not.be.empty');
 
-    cy.get('h3').contains('About');
+    cy.get('#about').should('be.visible');
 
-    cy.get('h3').contains('Projects');
+    cy.get('#projects');
 
     cy.get('div[class="grid lg:grid-cols-4 md:grid-cols-2 gap-4 my-3 p-3"]')
       .its('length')
@@ -22,7 +22,7 @@ describe('Index page', () => {
   });
 
   it('External links should work', () => {
-    cy.get('nav').get('a').contains('Projects').click();
+    cy.get('#nav-projects').click();
 
     cy.get('a')
       .contains('Alex289')

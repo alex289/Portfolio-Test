@@ -12,14 +12,14 @@ describe('Footer component', () => {
   });
 
   it('Should have working links', () => {
-    cy.get('footer').get('a').contains('About').click();
-    cy.get('h3').contains('About').should('be.visible');
+    cy.get('#footer-about').click();
+    cy.get('#about').should('be.visible');
 
-    cy.get('footer').get('a').contains('Home').click();
+    cy.get('#footer-home').click();
     cy.get('h1').contains('Hey, I’m Alexander Konietzko').should('be.visible');
 
-    cy.get('footer').get('a').contains('Projects').click();
-    cy.get('h3').contains('Projects').should('be.visible');
+    cy.get('#footer-projects').click();
+    cy.get('#projects').should('be.visible');
 
     cy.get('footer')
       .get('a')

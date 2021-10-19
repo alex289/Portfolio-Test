@@ -1,5 +1,6 @@
-describe('Navbar component', () => {
-  it('Should load page', () => {
+describe('Mobile view', () => {
+  beforeEach(() => {
+    cy.viewport('iphone-x');
     cy.visit('/');
   });
 
@@ -7,22 +8,30 @@ describe('Navbar component', () => {
     cy.get('nav');
   });
 
-  it('Should have working links', () => {
-    cy.get('#nav-about').click();
-    cy.get('h3').contains('About').should('be.visible');
-
-    cy.get('#nav-home').click();
-    cy.get('h1').contains('Hey, I’m Alexander Konietzko').should('be.visible');
-
-    cy.get('#nav-projects').click();
-    cy.get('h3').contains('Projects').should('be.visible');
+  it('Should not have normal navbar visible', () => {
+    cy.get('#nav-home').should('not.visible');
+    cy.get('#nav-about').should('not.visible');
+    cy.get('#nav-projects').should('not.visible');
   });
 
-  it('Should not have mobile menu visible', () => {
-    cy.get('#burger').should('not.visible');
+  it('Should have burger menu', () => {
     cy.get('#mobile-nav-home').should('not.visible');
     cy.get('#mobile-nav-about').should('not.visible');
     cy.get('#mobile-nav-projects').should('not.visible');
+
+    cy.get('#burger').should('be.visible').click();
+
+    cy.get('#mobile-nav-home').should('be.visible');
+    cy.get('#mobile-nav-about').should('be.visible');
+    cy.get('#mobile-nav-projects').should('be.visible');
+  });
+
+  it('Should have workin links in mobile menu', () => {
+    cy.get('#burger').click();
+
+    cy.get('#mobile-nav-about').click();
+
+    cy.get('#about').should('be.visible');
   });
 
   it('Dark/Light mode should work', () => {
