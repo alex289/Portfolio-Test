@@ -1,6 +1,6 @@
 describe('404 page', () => {
   it('should load page', () => {
-    cy.visit('/404', { failOnStatusCode: false });
+    cy.visit('/error', { failOnStatusCode: false });
   });
 
   it('Should have a navbar', () => {
