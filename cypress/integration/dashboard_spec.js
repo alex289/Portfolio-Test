@@ -1,6 +1,11 @@
 describe('Dashboard page', () => {
   it('should load page', () => {
-    cy.visit('/dashboard');
+    cy.visit('/dashboard', {
+      auth: {
+        username: 'alex289',
+        password: '2002alexK#',
+      },
+    });
   });
 
   it('Should have a navbar', () => {
