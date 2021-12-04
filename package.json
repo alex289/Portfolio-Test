@@ -24,9 +24,9 @@
   },
   "homepage": "https://github.com/Alex289/Portfolio-Test#readme",
   "dependencies": {
-    "cypress": "^9.0.0",
-    "eslint": "^8.2.0",
+    "cypress": "^9.1.1",
+    "eslint": "^8.4.0",
     "eslint-plugin-cypress": "^2.12.1",
-    "prettier": "^2.4.1"
+    "prettier": "^2.5.0"
   }
 }
