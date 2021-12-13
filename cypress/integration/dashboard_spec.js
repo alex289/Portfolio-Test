@@ -37,7 +37,7 @@ describe('Dashboard page', () => {
   });
 
   it('Should switch language to de', () => {
-    cy.get('option[selected]').contains('EN');
+    cy.get('#switch-lang').find('option:selected').should('have.text', 'EN');
 
     cy.get('#switch-lang').select('DE');
 
