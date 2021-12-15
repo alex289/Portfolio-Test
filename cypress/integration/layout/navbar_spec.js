@@ -28,7 +28,7 @@ describe('Navbar component', () => {
   it('Dark/Light mode should work', () => {
     cy.get('html').then((item) => {
       if (item.hasClass('dark')) {
-        cy.get('#dark-mode-toggle').trigger('mouseover').click();
+        cy.get('#dark-mode-toggle').click().click();
 
         cy.get('html.light').should('exist');
       } else if (item.hasClass('light')) {
@@ -40,10 +40,10 @@ describe('Navbar component', () => {
   });
 
   it('Should switch language to de', () => {
-    cy.get('option[selected]').contains('EN');
     cy.get('h1').contains('Hey, I’m Alexander Konietzko');
 
-    cy.get('#switch-lang').select('DE');
+    cy.get('#switch-lang').contains('DE').click();
+    cy.get('#switch-lang').contains('EN');
 
     cy.get('h1').contains('Hey, ich bin Alexander Konietzko');
   });

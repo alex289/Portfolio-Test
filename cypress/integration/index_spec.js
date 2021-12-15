@@ -16,7 +16,7 @@ describe('Index page', () => {
 
     cy.get('#projects');
 
-    cy.get('div[class="grid lg:grid-cols-4 md:grid-cols-2 gap-4 my-3 p-3"]')
+    cy.get('div[class="p-3 my-3 grid lg:grid-cols-4 md:grid-cols-2 gap-4"]')
       .its('length')
       .should('be.gte', 1);
   });
