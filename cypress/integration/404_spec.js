@@ -14,11 +14,11 @@ describe('404 page', () => {
   it('Dark/Light mode should work', () => {
     cy.get('html').then((item) => {
       if (item.hasClass('dark')) {
-        cy.get('#dark-mode-toggle').click().click();
+        cy.get('#dark-mode-toggle').click();
 
         cy.get('html.light').should('exist');
       } else if (item.hasClass('light')) {
-        cy.get('#dark-mode-toggle').click().click();
+        cy.get('#dark-mode-toggle').click();
 
         cy.get('html.dark').should('exist');
       }
