@@ -21,9 +21,17 @@ describe('Dashboard page', () => {
       if (item.hasClass('dark')) {
         cy.get('#dark-mode-toggle').click();
 
+        if (!item.hasClass('light')) {
+          cy.get('#dark-mode-toggle').click();
+        }
+
         cy.get('html.light').should('exist');
       } else if (item.hasClass('light')) {
         cy.get('#dark-mode-toggle').click();
+
+        if (!item.hasClass('dark')) {
+          cy.get('#dark-mode-toggle').click();
+        }
 
         cy.get('html.dark').should('exist');
       }
