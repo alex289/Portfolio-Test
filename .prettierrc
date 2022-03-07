@@ -1,4 +1,7 @@
 {
+  "endOfLine": "auto",
+  "bracketSameLine": true,
   "jsxSingleQuote": false,
-  "singleQuote": true
+  "singleQuote": true,
+  "parser": "typescript"
 }
