@@ -23,7 +23,7 @@ describe('Footer component', () => {
 
     cy.get('footer')
       .get('a')
-      .contains('Portfolio')
+      .contains('GitHub')
       .should('have.attr', 'href')
       .and('include', 'https://github.com/Alex289');
 
