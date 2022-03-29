@@ -29,9 +29,9 @@ describe('Footer component', () => {
 
     cy.get('footer')
       .get('a')
-      .contains('My setup')
+      .contains('My dotfiles')
       .should('have.attr', 'href')
-      .and('include', 'https://github.com/Alex289/My-config-setup');
+      .and('include', 'https://github.com/Alex289/dotfiles');
 
     cy.get('footer')
       .get('a')

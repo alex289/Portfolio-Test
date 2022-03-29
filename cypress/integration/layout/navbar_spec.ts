@@ -16,6 +16,8 @@ describe('Navbar component', () => {
 
     cy.get('#nav-projects').click();
     cy.get('h3').contains('Projects').should('be.visible');
+
+    cy.get('#nav-blog').should('be.visible');
   });
 
   it('Should not have mobile menu visible', () => {
@@ -23,6 +25,7 @@ describe('Navbar component', () => {
     cy.get('#mobile-nav-home').should('not.visible');
     cy.get('#mobile-nav-about').should('not.visible');
     cy.get('#mobile-nav-projects').should('not.visible');
+    cy.get('#mobile-nav-blog').should('not.visible');
   });
 
   it('Dark/Light mode should work', () => {
