@@ -21,6 +21,9 @@ describe('Footer component', () => {
     cy.get('#footer-projects').click();
     cy.get('#projects').should('be.visible');
 
+    cy.get('footer').get('a').contains('Guestbook').should('be.exist');
+    cy.get('footer').get('a').contains('Blog').should('be.exist');
+
     cy.get('footer')
       .get('a')
       .contains('GitHub')
@@ -47,7 +50,5 @@ describe('Footer component', () => {
         'include',
         'https://github.com/Alex289/Alex289/issues/new?assignees=Alex289&labels=Contact&template=contact-template.md&title=%5BContact%5D+Your-title-here'
       );
-
-    cy.get('footer').get('div').contains('Dashboard');
   });
 });
