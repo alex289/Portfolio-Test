@@ -15,15 +15,7 @@ describe('Mobile view', () => {
   });
 
   it('Should have burger menu', () => {
-    cy.get('#mobile-nav-home').should('not.visible');
-    cy.get('#mobile-nav-about').should('not.visible');
-    cy.get('#mobile-nav-projects').should('not.visible');
-
-    cy.get('#burger').should('be.visible').click();
-
-    cy.get('#mobile-nav-home').should('be.visible');
-    cy.get('#mobile-nav-about').should('be.visible');
-    cy.get('#mobile-nav-projects').should('be.visible');
+    cy.get('#burger').should('be.visible');
   });
 
   it('Should have workin links in mobile menu', () => {
@@ -31,7 +23,9 @@ describe('Mobile view', () => {
 
     cy.get('#mobile-nav-about').click();
 
-    cy.get('#about').should('be.visible');
+    cy.location().should((location) => {
+      expect(location.pathname).to.eq('/about');
+    });
   });
 
   it('Dark/Light mode should work', () => {
@@ -40,11 +34,11 @@ describe('Mobile view', () => {
   });
 
   it('Should switch language to de', () => {
-    cy.get('h1').contains('Hey, I’m Alexander Konietzko');
+    cy.get('h2').contains('Software Engineer and Student at Netgo');
 
     cy.get('#switch-lang').contains('DE').click();
     cy.get('#switch-lang').contains('EN');
 
-    cy.get('h1').contains('Hey, ich bin Alexander Konietzko');
+    cy.get('h2').contains('Software Entwickler und Student bei Netgo');
   });
 });

@@ -4,19 +4,19 @@ describe('Index page', () => {
   });
 
   it('Should have a profile image', () => {
-    cy.get(`img[alt="Profile picture"]`).should('be.visible');
+    cy.get(`img[alt="Alexander Konietzko"]`).should('be.visible');
   });
 
   it('Should have content', () => {
-    cy.get('h1').contains('Hey, I’m Alexander Konietzko');
+    cy.get('h1').contains('Alexander Konietzko');
 
     cy.get('h2').should('not.be.empty');
 
-    cy.get('#about').should('be.visible');
+    cy.get('h3').contains('Featured Posts').should('be.visible');
 
-    cy.get('#projects');
+    cy.get('h3').contains('Projects').should('be.visible');
 
-    cy.get('a').contains('Portfolio');
+    cy.get('p').contains('Portfolio');
   });
 
   it('External links should work', () => {

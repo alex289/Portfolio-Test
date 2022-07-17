@@ -31,6 +31,6 @@ describe('404 page', () => {
 
   it('Should get back', () => {
     cy.get('a').contains('Zurück zur Startseite').click();
-    cy.url().should('eq', 'https://alexanderkonietzko.vercel.app/de');
+    cy.url().should('eq', Cypress.config('baseUrl') + '/de');
   });
 });
