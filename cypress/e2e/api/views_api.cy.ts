@@ -1,26 +1,25 @@
-describe('Guestbook api', () => {
+describe('Views api', () => {
   it('Should load api request', () => {
-    cy.request('/api/guestbook')
-      .as('guestbook')
+    cy.request('/api/views')
+      .as('views')
       .its('headers')
       .its('content-type')
       .should('include', 'application/json');
 
-    cy.get('@guestbook').should((res) => {
+    cy.get('@views').should((res) => {
       expect(res.status).to.equal(200);
       expect(res.body).to.exist;
-      expect(res.body).to.have.length.above(0);
     });
   });
 
   it('Should load api request with given id', () => {
-    cy.request('/api/guestbook/6')
-      .as('guestbook')
+    cy.request('/api/views/initial-commit')
+      .as('views')
       .its('headers')
       .its('content-type')
       .should('include', 'application/json');
 
-    cy.get('@guestbook').should((res) => {
+    cy.get('@views').should((res) => {
       expect(res.status).to.equal(200);
       expect(res.body).to.exist;
     });
