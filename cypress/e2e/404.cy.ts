@@ -14,7 +14,7 @@ describe('404 page', () => {
   it('Dark/Light mode should work', () => {
     cy.get('#dark-mode-toggle', { timeout: 10000 }).should('be.visible');
     cy.get('#dark-mode-toggle').click();
-    cy.get('html').should('have.class', 'light');
+    cy.get('html').should('have.class', 'dark');
   });
 
   it('Should have 404 title', () => {

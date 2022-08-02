@@ -20,21 +20,4 @@
 export default (
   on: Cypress.PluginEvents,
   config: Cypress.PluginConfigOptions
-) => {
-  on('before:browser:launch', (browser = {
-    name: "",
-    family: "chromium",
-    channel: "",
-    displayName: "",
-    version: "",
-    majorVersion: "",
-    path: "",
-    isHeaded: false,
-    isHeadless: false
-  }, args) => {
-    if (browser.family === 'chromium') {
-      args.args.push('--force-dark-mode=true')
-      return args
-    }
-  })
-};
+) => {};
