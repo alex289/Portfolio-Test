@@ -26,7 +26,7 @@ describe('404 page', () => {
     cy.get('#switch-lang').contains('EN');
 
     cy.get('#powered-by').contains(
-      'Geschrieben mit Next.js und TailwindCss. Bereitgestellt auf Vercel.'
+      'Geschrieben mit Next.js und TailwindCSS. Bereitgestellt auf Vercel.'
     );
   });
 

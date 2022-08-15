@@ -9,6 +9,7 @@ describe('About page', () => {
 
   it('Should have Content', () => {
     cy.get('h1').contains('Links').should('be.visible');
+    cy.get('h1').contains('Tools').should('be.visible');
     cy.get('h1').contains('Timeline').should('be.visible');
     cy.get('h1').contains('Headshots').should('be.visible');
   });

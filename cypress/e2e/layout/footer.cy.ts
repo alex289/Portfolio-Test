@@ -8,7 +8,7 @@ describe('Footer component', () => {
 
     cy.get('footer')
       .get('p')
-      .contains('Powered by Next.js and TailwindCss. Hosted on Vercel.');
+      .contains('Powered by Next.js and TailwindCSS. Hosted on Vercel.');
   });
 
   it('Should have working links', () => {
@@ -25,19 +25,19 @@ describe('Footer component', () => {
       .get('a')
       .contains('GitHub')
       .should('have.attr', 'href')
-      .and('include', 'https://github.com/Alex289');
+      .and('include', 'https://github.com/alex289');
 
     cy.get('footer')
       .get('a')
       .contains('My dotfiles')
       .should('have.attr', 'href')
-      .and('include', 'https://github.com/Alex289/dotfiles');
+      .and('include', 'https://github.com/alex289/dotfiles');
 
     cy.get('footer')
       .get('a')
       .contains('Source code')
       .should('have.attr', 'href')
-      .and('include', 'https://github.com/Alex289');
+      .and('include', 'https://github.com/alex289');
 
     cy.get('footer')
       .get('a')
@@ -45,7 +45,7 @@ describe('Footer component', () => {
       .should('have.attr', 'href')
       .and(
         'include',
-        'https://github.com/Alex289/Alex289/issues/new?assignees=Alex289&labels=Contact&template=contact-template.md&title=%5BContact%5D+Your-title-here'
+        'https://github.com/alex289/Alex289/issues/new?assignees=alex289&labels=Contact&template=contact-template.md&title=%5BContact%5D+Your-title-here'
       );
   });
 });
