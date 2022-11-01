@@ -16,12 +16,12 @@ describe('Index page', () => {
 
     cy.get('h3').contains('Projects').should('be.visible');
 
-    cy.get('p').contains('Portfolio');
+    cy.get('h2').find('div').should('have.length', 9);
   });
 
   it('External links should work', () => {
     cy.get('#nav-projects').click();
 
-    cy.get('p').contains('Portfolio');
+    cy.get('#Portfolio').should('exist');
   });
 });
