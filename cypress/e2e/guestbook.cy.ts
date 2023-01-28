@@ -8,6 +8,7 @@ describe('Guestbook page', () => {
   });
 
   it('Should have login button', () => {
-    cy.get('button').contains('Login').should('be.visible');
+    cy.get('button').contains('Sign in with GitHub').should('be.visible');
+    cy.get('button').contains('Sign in with Google').should('be.visible');
   });
 });
