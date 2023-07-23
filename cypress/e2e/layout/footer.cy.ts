@@ -45,7 +45,7 @@ describe('Footer component', () => {
       .should('have.attr', 'href')
       .and(
         'include',
-        'https://github.com/alex289/Alex289/issues/new?assignees=alex289&labels=Contact&template=contact-template.md&title=%5BContact%5D+Your-title-here'
+        'https://github.com/alex289/Alex289/issues/new?assignees=alex289&labels=Contact&template=contact-template.md&title=%5BContact%5D+Your-title-here',
       );
   });
 });
