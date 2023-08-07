@@ -25,14 +25,14 @@
   },
   "homepage": "https://github.com/Alex289/Portfolio-Test#readme",
   "dependencies": {
-    "cypress": "^12.17.2",
-    "eslint": "^8.45.0",
+    "cypress": "^12.17.3",
+    "eslint": "^8.46.0",
     "eslint-plugin-cypress": "^2.13.3",
-    "prettier": "^3.0.0"
+    "prettier": "^3.0.1"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.1.0",
-    "@typescript-eslint/parser": "^6.1.0",
+    "@typescript-eslint/eslint-plugin": "^6.3.0",
+    "@typescript-eslint/parser": "^6.3.0",
     "typescript": "^5.1.6"
   }
 }
