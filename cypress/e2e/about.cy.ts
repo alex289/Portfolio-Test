@@ -1,6 +1,6 @@
 describe('About page', () => {
   it('Should load page', () => {
-    cy.visit('/about');
+    cy.visit('/en/about');
   });
 
   it('Should have a title', () => {

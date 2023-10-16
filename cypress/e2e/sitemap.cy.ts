@@ -4,7 +4,7 @@ describe('Sitemap page', () => {
       .as('sitemap')
       .its('headers')
       .its('content-type')
-      .should('include', 'text/xml');
+      .should('include', 'application/xml');
 
     cy.get('@sitemap').should((res) => {
       expect(res.status).to.equal(200);

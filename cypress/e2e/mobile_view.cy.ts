@@ -1,7 +1,7 @@
 describe('Mobile view', () => {
   beforeEach(() => {
     cy.viewport('iphone-x');
-    cy.visit('/');
+    cy.visit('/en');
   });
 
   it('Should have a navbar', () => {
@@ -24,7 +24,7 @@ describe('Mobile view', () => {
     cy.get('#mobile-nav-about').click();
 
     cy.location().should((location) => {
-      expect(location.pathname).to.eq('/about');
+      expect(location.pathname).to.eq('/en/about');
     });
   });
 

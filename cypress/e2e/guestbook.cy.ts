@@ -1,6 +1,6 @@
 describe('Guestbook page', () => {
   it('Should load page', () => {
-    cy.visit('/guestbook');
+    cy.visit('/en/guestbook');
   });
 
   it('Should have a title', () => {

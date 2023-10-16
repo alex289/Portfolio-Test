@@ -1,6 +1,6 @@
 describe('Navbar component', () => {
   it('Should load page', () => {
-    cy.visit('/');
+    cy.visit('/en');
   });
 
   it('Should have a navbar', () => {

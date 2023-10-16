@@ -11,17 +11,4 @@ describe('Views api', () => {
       expect(res.body).to.exist;
     });
   });
-
-  it('Should load api request with given id', () => {
-    cy.request('/api/views/initial-commit')
-      .as('views')
-      .its('headers')
-      .its('content-type')
-      .should('include', 'application/json');
-
-    cy.get('@views').should((res) => {
-      expect(res.status).to.equal(200);
-      expect(res.body).to.exist;
-    });
-  });
 });

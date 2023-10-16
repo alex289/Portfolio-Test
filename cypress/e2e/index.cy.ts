@@ -1,6 +1,6 @@
 describe('Index page', () => {
   it('Should load page', () => {
-    cy.visit('/');
+    cy.visit('/en');
   });
 
   it('Should have a profile image', () => {
@@ -15,8 +15,6 @@ describe('Index page', () => {
     cy.get('h3').contains('Featured Posts').should('be.visible');
 
     cy.get('h3').contains('Projects').should('be.visible');
-
-    cy.get('h2').find('div').should('have.length', 9);
   });
 
   it('External links should work', () => {

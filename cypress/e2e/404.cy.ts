@@ -1,6 +1,6 @@
 describe('404 page', () => {
   it('should load page', () => {
-    cy.visit('/404', { failOnStatusCode: false });
+    cy.visit('/en/404', { failOnStatusCode: false });
   });
 
   it('Should have a navbar', () => {
@@ -17,8 +17,8 @@ describe('404 page', () => {
     cy.get('html').should('have.class', 'dark');
   });
 
-  it('Should have 404 title', () => {
-    cy.get('h1').contains('404');
+  it('Should have Oops title', () => {
+    cy.get('h1').contains('Oops');
   });
 
   it('Should switch language to de', () => {

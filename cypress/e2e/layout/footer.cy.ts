@@ -1,6 +1,6 @@
 describe('Footer component', () => {
   it('Should load page', () => {
-    cy.visit('/');
+    cy.visit('/en');
   });
 
   it('Should have a navbar', () => {
@@ -12,11 +12,11 @@ describe('Footer component', () => {
   });
 
   it('Should have working links', () => {
-    cy.get('#footer-about').should('be.visible');
+    cy.get('[id="footer.about"]').should('be.visible');
 
-    cy.get('#footer-home').should('be.visible');
+    cy.get('[id="footer.home"]').should('be.visible');
 
-    cy.get('#footer-projects').should('be.visible');
+    cy.get('[id="footer.projects"]').should('be.visible');
 
     cy.get('footer').get('a').contains('Guestbook').should('be.visible');
     cy.get('footer').get('a').contains('Blog').should('be.visible');
@@ -43,9 +43,6 @@ describe('Footer component', () => {
       .get('a')
       .contains('Contact')
       .should('have.attr', 'href')
-      .and(
-        'include',
-        'https://github.com/alex289/Alex289/issues/new?assignees=alex289&labels=Contact&template=contact-template.md&title=%5BContact%5D+Your-title-here',
-      );
+      .and('include', 'mailto:me@alexanderkonietzko.com');
   });
 });
