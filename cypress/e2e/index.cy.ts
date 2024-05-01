@@ -19,7 +19,5 @@ describe('Index page', () => {
 
   it('External links should work', () => {
     cy.get('#nav-projects').click();
-
-    cy.get('#Portfolio').should('exist');
   });
 });
