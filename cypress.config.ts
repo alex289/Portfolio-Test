@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
 import { defineConfig } from 'cypress';
 
 export default defineConfig({

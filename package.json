@@ -6,7 +6,7 @@
     "cypress:open": "node_modules/.bin/cypress open",
     "cypress:run": "node_modules/.bin/cypress run --config video=false",
     "cypress:run:record": "node_modules/.bin/cypress run",
-    "lint": "eslint cypress/**/*.ts",
+    "lint": "eslint .",
     "format": "prettier --write cypress/e2e/**"
   },
   "repository": {
@@ -25,14 +25,16 @@
   },
   "homepage": "https://github.com/Alex289/Portfolio-Test#readme",
   "dependencies": {
-    "cypress": "^13.8.1",
-    "eslint": "^8.57.0",
-    "eslint-plugin-cypress": "^3.0.2",
+    "cypress": "^13.10.0",
+    "eslint": "^9.4.0",
+    "eslint-plugin-cypress": "^3.3.0",
     "prettier": "^3.2.5"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^7.8.0",
-    "@typescript-eslint/parser": "^7.8.0",
-    "typescript": "^5.4.5"
+    "@eslint/js": "^9.4.0",
+    "@types/eslint__js": "^8.42.3",
+    "@typescript-eslint/eslint-plugin": "^7.11.0",
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^7.11.0"
   }
 }
