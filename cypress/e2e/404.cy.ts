@@ -31,6 +31,7 @@ describe('404 page', () => {
   });
 
   it('Should get back', () => {
+    cy.visit('/de/404', { failOnStatusCode: false });
     cy.get('a').contains('Zurück zur Startseite').click();
     cy.url().should('eq', Cypress.config('baseUrl') + '/de');
   });
