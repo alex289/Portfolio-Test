@@ -13,6 +13,6 @@ describe('Blog page', () => {
       .contains('Initial Commit')
       .should('exist')
       .click({ force: true });
-    expect(cy.url()).to.not.equal('https://alexanderkonietzko.vercel.app/blog');
+    expect(cy.url()).to.not.equal('https://alexanderkonietzko.com/blog');
   });
 });
